@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adobe Sign Onboarding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-strip" aria-label="Nonya powered by Adobe Acrobat Sign">
+        <div class="nonya-logo">Nonya!</div>
+        <div class="brand-divider"></div>
+        <div class="powered">
+          <span>Powered by</span>
+          <strong>Adobe<br />Acrobat Sign</strong>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a class="active" href="#">Home</a>
+        <a href="#">Send</a>
+        <a href="#">Manage</a>
+        <a href="#">Workflows</a>
+        <a href="#">Reports</a>
+        <a href="#">Resources <span class="new-chip">NEW</span></a>
+        <a href="#">Admin</a>
+        <a href="#">Create Library Template</a>
+      </nav>
+
+      <div class="top-actions" aria-label="Account actions">
+        <button class="top-page-back-button" type="button" data-action="page-back" aria-label="Back" title="Back" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+        </button>
+        <button class="icon-button" aria-label="Help">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M9.7 9a2.45 2.45 0 0 1 4.66 1.08c0 1.84-2.15 2.06-2.15 3.65"></path>
+            <path d="M12.2 17.3h.01"></path>
+          </svg>
+        </button>
+        <button class="avatar" aria-label="User profile"></button>
+      </div>
+    </header>
+
+    <section class="progress-band" aria-label="Setup progress">
+      <div class="progress-wrap">
+        <div class="ring" aria-label="20 percent complete">20%</div>
+        <h1>Great start — Let's go to your next task</h1>
+        <button data-adaptive-trigger="continue">Continue</button>
+      </div>
+    </section>
+
+    <main class="page-shell">
+      <section class="summary-row" aria-label="Account summary">
+        <h2>Welcome, Kakati</h2>
+        <div class="summary-metrics">
+          <div class="metric">
+            <strong>0</strong>
+            <span>In Progress</span>
+          </div>
+          <div class="metric">
+            <strong>0</strong>
+            <span>Waiting For You</span>
+          </div>
+          <div class="metric alerts">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 7h18s-3 0-3-7"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span>Events And Alerts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-task">
+        <div class="doc-illustration" aria-hidden="true">
+          <svg viewBox="0 0 120 140">
+            <path class="sheet" d="M24 10h61l21 22v88c0 8.8-7.2 16-16 16H24c-8.8 0-16-7.2-16-16V26c0-8.8 7.2-16 16-16z" />
+            <path class="fold" d="M84 11v24h22" />
+            <path class="line long" d="M31 40h24" />
+            <path class="line wide" d="M31 58h67" />
+            <path class="line wide2" d="M31 70h57" />
+            <path class="line med" d="M31 82h64" />
+            <path class="line short" d="M31 94h42" />
+            <path class="seal" d="M31 92h16v27l-8-7-8 7z" />
+            <path class="sig" d="M57 116h24" />
+            <path class="x1" d="M81 92l12 12" />
+            <path class="x2" d="M93 92l-12 12" />
+          </svg>
+        </div>
+        <div class="hero-copy">
+          <h2>Send a document for signature</h2>
+          <p>Request e-signature on a new agreement, or start from your library template</p>
+          <div class="button-row">
+            <button class="primary" data-adaptive-trigger="request">Request e-signature</button>
+            <button class="secondary">Start from library</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools" aria-labelledby="tools-title">
+        <h2 id="tools-title">Do more with Acrobat Sign</h2>
+        <div class="tool-grid">
+          <a class="tool-card" href="#">
+            <span class="tool-icon orange">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 5h14l6 6v24H11z"></path><path d="M25 5v7h7"></path><path d="M16 5v30"></path><path d="M11 15h20M11 25h20"></path></svg>
+            </span>
+            <span>Create a reusable template</span>
+          </a>
+          <a class="tool-card" href="#">
+            <span class="tool-icon pink">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M10 7h17l5 5v21H10z"></path><path d="M17 16l-5 5 5 5"></path><path d="M23 16l5 5-5 5"></path><path d="M21 15l-3 12"></path></svg>
+            </span>
+            <span>Publish a web form</span>
+          </a>
+          <a class="tool-card" href="#">
+            <span class="tool-icon purple">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 5h20l4 4v26H9z"></path><path d="M15 13h10M15 18h10M15 23h7"></path><path d="M21 31c4-9 8-10 11-8-3 2-4 4-5 8"></path><path d="M16 31h11"></path></svg>
+            </span>
+            <span>Fill and sign a document</span>
+          </a>
+          <a class="tool-card" href="#">
+            <span class="tool-icon blue-purple">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 9h18v24H12z"></path><path d="M16 6h18v24"></path><path d="M20 13h5v6h-5z"></path><path d="M18 25h10"></path><path d="M19 28h7"></path></svg>
+            </span>
+            <span>Send in bulk</span>
+          </a>
+          <a class="tool-card" href="#">
+            <span class="tool-icon sky">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 14h10v12H8z"></path><path d="M22 7h10v12H22z"></path><path d="M22 25h10v8H22z"></path><path d="M18 20h4"></path><path d="M27 19v6"></path></svg>
+            </span>
+            <span>Create a reusable workflow</span>
+          </a>
+          <a class="tool-card tagged" href="#">
+            <span class="tag">NEW</span>
+            <span class="tool-icon dark">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5l12 6v9c0 8-5.5 12.5-12 15-6.5-2.5-12-7-12-15v-9z"></path><path d="M20 5v30"></path><rect x="24" y="22" width="10" height="9" rx="1.5"></rect><path d="M27 22v-3a2 2 0 0 1 4 0v3"></path></svg>
+            </span>
+            <span>Share account<br />access</span>
+          </a>
+          <a class="tool-card tagged" href="#">
+            <span class="tag">NEW</span>
+            <span class="tool-icon violet">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="10" r="5"></circle><path d="M10 31c1-7 6-10 12-8"></path><path d="M22 25h12"></path><path d="M28 19v12"></path></svg>
+            </span>
+            <span>Invite teammate</span>
+          </a>
+          <a class="tool-card tagged" href="#">
+            <span class="tag">NEW</span>
+            <span class="tool-icon green">
+              <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="10" width="8" height="8" rx="2"></rect><rect x="22" y="6" width="10" height="10" rx="2"></rect><rect x="8" y="24" width="8" height="8" rx="2"></rect><rect x="22" y="22" width="10" height="10" rx="2"></rect></svg>
+            </span>
+            <span>Integrations hub</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" role="status">Your Adobe Acrobat Sign free trial has 25 days left. Contact your admin to buy a paid plan.</div>
+    <button class="learning-button" aria-label="Learning center">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M6 19 24 9l18 10-18 10z"></path>
+        <path d="M14 24v8c5 4 15 4 20 0v-8"></path>
+        <path d="M42 19v12"></path>
+      </svg>
+    </button>
+
+    <div class="modal-backdrop" data-modal="adaptive" hidden>
+      <section class="adaptive-modal" role="dialog" aria-modal="true" aria-labelledby="adaptive-title">
+        <button class="modal-back-button" type="button" data-action="modal-back" aria-label="Back" title="Back">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+        </button>
+        <aside class="adaptive-rail">
+          <div class="rail-heading">
+            <h2>Guided setup</h2>
+          </div>
+          <ol class="adaptive-steps" aria-label="Guided setup steps"></ol>
+        </aside>
+        <div class="adaptive-panel">
+          <button class="modal-close" type="button" data-action="close-adaptive" aria-label="Close">×</button>
+          <div class="adaptive-counter" data-counter></div>
+          <div class="adaptive-content" data-adaptive-content></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" data-modal="checklist" hidden>
+      <section class="checklist-modal" role="dialog" aria-modal="true" aria-labelledby="checklist-title">
+        <button class="modal-back-button" type="button" data-action="modal-back" aria-label="Back" title="Back">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+        </button>
+        <aside class="adaptive-rail">
+          <div class="rail-heading">
+            <h2>Get started</h2>
+            <p>Acrobat Sign checklist</p>
+          </div>
+          <ol class="adaptive-steps">
+            <li class="step-item active"><span>1</span><p>Send a document for signature</p></li>
+            <li class="step-item muted"><span>2</span><p>Create a reusable template</p></li>
+            <li class="step-item muted"><span>3</span><p>Invite teammate</p></li>
+            <li class="step-item muted"><span>4</span><p>Publish a web form</p></li>
+            <li class="step-item muted"><span>5</span><p>Explore integrations</p></li>
+          </ol>
+        </aside>
+        <div class="adaptive-panel">
+          <button class="modal-close" type="button" data-action="close-checklist" aria-label="Close">×</button>
+          <div class="adaptive-counter">TASK 0/5</div>
+          <div class="checklist-content">
+            <h2 id="checklist-title">Send a document for signature</h2>
+            <p>Request e-signature on a new agreement, or start from your library template.</p>
+            <div class="modal-illustration">
+              <svg viewBox="0 0 140 90" aria-hidden="true">
+                <path d="M42 17h39l16 16v42H42z" />
+                <path d="M81 17v17h16" />
+                <path d="M52 42h34M52 52h26M52 62h31" />
+                <path class="modal-blue-fill" d="M35 39h17v27l-8.5-7-8.5 7z" />
+              </svg>
+            </div>
+            <button class="modal-primary" type="button">Request e-signature</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
