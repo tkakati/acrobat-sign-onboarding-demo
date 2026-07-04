@@ -645,6 +645,7 @@ function restoreModalHistory() {
   if (!previousState) return false;
   progress = normalizeProgress({ ...progress, ...previousState });
   saveProgress();
+  updateHomeProgressBanner();
   renderAdaptiveFlow();
   return true;
 }
@@ -683,6 +684,28 @@ function markStepSkipped(stepNumber) {
   syncGuidedSetupStatus();
 }
 
+function clearStepProgress(stepNumber) {
+  const completed = new Set(progress.completedSteps || []);
+  const skipped = new Set(progress.skippedSteps || []);
+  completed.delete(stepNumber);
+  skipped.delete(stepNumber);
+  progress.completedSteps = [...completed].sort((a, b) => a - b);
+  progress.skippedSteps = [...skipped].sort((a, b) => a - b);
+  progress.completed = false;
+  progress.guidedSetupStatus = "in_progress";
+  if (stepNumber <= 3) progress.profile.completed = false;
+  if (stepNumber <= 2) progress.firstSendInstructionActive = false;
+  if (stepNumber <= 1) progress.toolEducationActive = false;
+}
+
+function rewindToGuidedStep(stepNumber) {
+  clearStepProgress(stepNumber);
+  progress.currentStep = stepNumber;
+  saveProgress();
+  updateHomeProgressBanner();
+  renderAdaptiveFlow();
+}
+
 function guidedProgressPercent() {
   return Math.min(((progress.completedSteps || []).length + (progress.skippedSteps || []).length) * 25, 100);
 }
@@ -708,6 +731,7 @@ function openAdaptiveModal() {
 
 function closeAdaptiveModal() {
   adaptiveModal.hidden = true;
+  updateHomeProgressBanner();
 }
 
 function openChecklistModal() {
@@ -1059,6 +1083,7 @@ function handleModalBack() {
     if (progress.currentStep === 1 && progress.toolEducationActive) {
       progress.toolEducationActive = false;
       saveProgress();
+      updateHomeProgressBanner();
       renderAdaptiveFlow();
       return;
     }
@@ -1066,22 +1091,20 @@ function handleModalBack() {
     if (progress.currentStep === 2 && progress.firstSendInstructionActive) {
       progress.firstSendInstructionActive = false;
       saveProgress();
+      updateHomeProgressBanner();
       renderAdaptiveFlow();
       return;
     }
 
     if (progress.currentStep > 1 && progress.currentStep <= 4) {
-      progress.completed = false;
-      progress.guidedSetupStatus = "in_progress";
-      progress.currentStep -= 1;
-      saveProgress();
-      renderAdaptiveFlow();
+      rewindToGuidedStep(progress.currentStep - 1);
       return;
     }
 
     if (progress.currentStep === 1) {
       progress.currentStep = 0;
       saveProgress();
+      updateHomeProgressBanner();
       renderAdaptiveFlow();
       return;
     }

@@ -4532,6 +4532,9 @@ a {
   align-items: center;
   justify-content: flex-end;
   gap: 14px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #eceef3;
 }
 
 .template-step-actions .modal-primary {
